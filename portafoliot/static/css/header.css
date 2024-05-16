@@ -1,0 +1,40 @@
+nav {
+    background-color: black; 
+    display: flex; 
+    justify-content: center; 
+    height: 70px; 
+    align-items: center;
+}
+
+ul {
+    display: flex; 
+    flex-direction: row;
+}
+
+li {
+    margin: 5px;
+}
+
+a {
+    color: white;
+    transition: font-size 0.3s, color 0.3s;
+}
+
+a:hover {
+    font-size: 120%;
+    color: yellow;
+}
+
+
+/* Cambios en dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Cambia la dirección a columna */
+        height: auto; /* Altura automática para adaptarse al contenido */
+    }
+
+    ul {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos en la columna */
+    }
+}
