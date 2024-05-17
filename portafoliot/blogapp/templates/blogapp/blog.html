@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de blogs{% endblock %}
+
+{% block content %}
+    <div class="blogcontent">
+        <h2>Lista de blogs</h2>
+        <div>
+            <div>
+                {% for blog in blogs %}
+                    <div class="articulo">
+                        <div><h5>{{ blog.title }}</h5></div>
+                        <div>
+                        <p>{{ blog.content|slice:":100" }}</p>
+                        <a href="{% url 'blog_detail' blog.id %}" ><button type="button" class="btn btn-outline-secondary">Leer Completo</button></a>
+                        </div>
+                        <div><p>Publicado el: {{ blog.date_posted }}</p></div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block css %}
+    <style>
+        .blogcontent {
+            background-color: aqua;
+            padding: 20px;
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .articulo {
+            margin: 20px;
+        }
+    </style>
+{% endblock %}
