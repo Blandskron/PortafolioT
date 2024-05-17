@@ -23,4 +23,6 @@ urlpatterns = [
     path('home/', include('homeapp.urls')),
     # BlogApp
     path('blog/', include('blogapp.urls')),
+    # ContactApp
+    path('contact/', include('contactapp.urls')),
 ]
