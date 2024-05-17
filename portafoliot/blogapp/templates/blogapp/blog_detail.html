@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+    <div class="blogcontent">
+        <div>
+            <div>
+                <h5>{{ blog.title }}</h5>
+                <div>
+                    <p>{{ blog.content }}</p>
+                </div>
+                <br>
+                <p>Publicado el: {{ blog.date_posted }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block css %}
+    <style>
+        .blogcontent {
+            background-color: aqua;
+            padding: 20px;
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+{% endblock %}

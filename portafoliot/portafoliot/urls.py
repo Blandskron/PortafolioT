@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # HomeApp
     path('home/', include('homeapp.urls')),
-
+    # BlogApp
+    path('blog/', include('blogapp.urls')),
 ]
