@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/whatsapp.css' %}">
     {% block css %}{% endblock %}
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -26,6 +27,8 @@
     
     {% block content %}
     {% endblock %}
+
+    {% include "whatsapp.html" %}
 
     {% include "footer.html" %}
     
