@@ -7,6 +7,13 @@
         </ul>
         <ul class="nav justify-content-end">
             {% if user.is_authenticated %}
+                <li><a href="{% url 'expense_list' %}">Expenses List</a></li>
+            {% else %}
+
+            {% endif %}
+        </ul>
+        <ul class="nav justify-content-end">
+            {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}" style="color: white;">
                         <button type="button" class="btn btn-outline-light">Logout</button>

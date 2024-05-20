@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <div class="card mt-5">
+      <div class="card-body" style="background-color: #161e29; border-top: 1px solid #2e3c51; box-shadow: 0px 0px 20px rgba(106, 21, 162, 0.5);">
+        <h2 style="color: white;">Crear/Editar Gasto</h2>
+        <form method="post" style="color: white;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-primary" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <div class="card mt-5">
+      <div class="card-body" style="background-color: #161e29; border-top: 1px solid #2e3c51; box-shadow: 0px 0px 20px rgba(106, 21, 162, 0.5);">
+        <h2 style="color: white;">Lista de Gastos</h2>
+        <ul style="color: white;">
+          {% for expense in expenses %}
+            <li style="color: white;">{{ expense.description }} - {{ expense.amount }} - {{ expense.date }} <a href="{% url 'expense_update' expense.pk %}">Editar</a> <a href="{% url 'expense_delete' expense.pk %}">Eliminar</a></li>
+          {% empty %}
+            <li style="color: white;">No hay gastos</li>
+          {% endfor %}
+        </ul>
+        <a href="{% url 'expense_create' %}" class="btn btn-outline-primary">Agregar Gasto</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

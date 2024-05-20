@@ -31,6 +31,8 @@ urlpatterns = [
     path('contact/', include('contactapp.urls')),
     # AuthApp
     path('auth/', include('authapp.urls')),
+    # ExpensesApp
+    path('expenses/', include('expensesapp.urls')),
 ]
 
 if settings.DEBUG:
