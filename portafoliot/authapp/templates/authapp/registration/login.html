@@ -4,28 +4,26 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <div>
-        <div>
-            <div>
-                <div>
-                    <div><h2>Login</h2></div>
-                    <div>
-                        <form method="post">
-                            {% csrf_token %}
-                            <div>
-                                <label for="username">Username:</label>
-                                <input type="text" class="form-control mt-2" id="username" name="username">
-                            </div>
-                            <div>
-                                <label for="password">Password:</label>
-                                <input type="password" class="form-control mt-2" id="password" name="password">
-                            </div>
-                            <button type="submit" class="btn btn-outline-success m-2">Login</button>
-                            <a href="{% url 'signup' %}" class="btn btn-outline-warning m-2">Sign Up</a>
-                        </form>
-                    </div>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card bg-secondary">
+        <div class="card-body">
+            <h2 class="card-title text-center">Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username">
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-outline-success">Login</button>
+                    <a href="{% url 'signup' %}" class="btn btn-outline-warning">Sign Up</a>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 {% endblock %}
